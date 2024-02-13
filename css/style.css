@@ -1,0 +1,214 @@
+*{
+    font-family: 'Roboto', sans-serif;
+}
+
+header{
+    position: relative;
+}
+
+nav{
+    position: fixed;
+    width: 100%;
+    height: 53px;
+    background-color: #212121;
+    z-index: 2;
+}
+
+.menu{
+    display: flex;/*  эту и следующую строчку мы добавили, чтобы список был не в столбик, а в строку */
+    justify-content: space-between;
+    padding: 15px 70px;
+    margin: 0;/*  обнуляем, т.к. в Bootstrap автоматические отступы */
+    list-style-type: none; /* список без каких-то обозначений */
+}
+
+.menu .menu_link{
+    color: #FFF;
+    font-size: 15px;
+    font-weight: 300;
+}
+
+.menu .menu_item {
+    border-right: 2px dotted black;
+    padding-right: 28px;
+}
+
+.subheader{
+    position: absolute; /* добавляем это свойство, чтобы наш блок с картинкой наехал на блок с телефонами и лого, в родительском блоке(header)прописываем position relative */
+    top: 50px;
+    width: 100%; /* это свойство задаем, чтобы наш блок был во всю ширину страницы(после того как предыдущи блок наехал все съезжает вбок) */
+    height: 87px;
+    background-color: rgba(0,0,0, .6); /* мы задали background-color через rgba, т.к. нам нужно, чтобы сам цвет был прозразчным, но все наши элементы были не прозрачнымы, если бы мы задали через opacity, то наши элементы тоже бы стали прозрачными */
+}
+
+.subheader .subheader_logo{
+    display: block; /* чтобы наш логотип отходил от верхнего края через margin_top нам необходимо ссылку сделать блочным элементом */
+    max-width: 100%; /* назначаем, чтобы при изменении логотипа не менялся размер картинки */
+    margin-top: 16px;
+}
+
+.subheader .sunheader_official{
+    margin-top: 6px;
+    color: #FFF;
+    font-size: 13px;
+    font-weight: 100;
+    opacity: .6;
+}
+
+.subheader .subheader_call{
+    margin-top: 22px;
+    color: #FFF;
+    text-align: right;
+    font-size: 12px;
+    font-weight: 300;
+}
+
+.subheader .subheader_phone{
+    display: block;
+    margin-top: 8px;
+    color: #FFF;
+    text-align: right;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 400;
+    text-transform: uppercase;
+    line-height: 12px;
+}
+
+.subheader .subheader_btn{
+    margin-top: 22px;
+    width: 172px;
+    height: 46px;
+    border-radius: 4px;
+    background: linear-gradient(0deg, #1EACC7 0%, #4CE2FF 100%);
+    box-shadow: 0px -3px 0px 0px rgba(0, 0, 0, 0.12) inset;
+    border: none;
+    color: #FFF;
+    text-align: center;
+    text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.21);
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    text-transform: uppercase;
+
+}
+
+.promo{
+    min-height: 799px;
+    background: url(../img/uber_bg.jpg) center center/cover no-repeat;
+    padding: 150px 0 135px 0; /* здесь мы указываем отступы сверху от шапки и снизу кнопка следующий блок */
+}
+
+.promo .promo_header{
+    color: #FFF;
+    text-align: center;
+    font-size: 60px;
+    font-weight: 900;
+    text-transform: uppercase;
+    line-height: 60px;
+    margin: 0; /* прописали здесь и в следующем классе 0, т.к. в Bootstrap на автомате отступ */
+
+}
+
+.promo .promo_subheader{
+    color: #FFF;
+    text-align: center;
+    font-size: 36px;
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: 36px;
+    margin: 0;
+    margin-top: 22px;
+}
+
+.promo .promo_descr{
+    color: #FFF;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 24px; /* оставили, т.к. много текста и нам нужен межстрочный интервал */
+    margin-top: 16px;
+}
+
+.promo .promo_btn{
+    display:block; /* задали кнопку как блок, чтобы сделать ее по центру */
+    margin: 118px auto 0 auto; /* здесь указываем отступ сверху, а оступы справа и слева указываем как auto, чтобы разместить их по центру */
+    width: 259px;
+    height: 63px;
+    border-radius: 4px;
+    background: linear-gradient(0deg, #1EACC7 0%, #4CE2FF 100%);
+    box-shadow: 0px -4px 0px 0px rgba(0, 0, 0, 0.12) inset;
+    border: none;
+    color: #FFF;
+    text-align: center;
+    text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.21);
+    font-size: 18px;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.prons{
+    padding: 20px 0 64px 0;
+}
+
+.label{
+    margin: 0 auto;
+    height: 24px;
+    width: 112px;
+    padding: 5px 12px;
+    background-color: #000000;
+    color: #ffffff;
+    font-size: 11px;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+.title{
+    color: #222;
+    text-align: center;
+    font-size: 38px;
+    font-style: normal;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-top: 30px;
+}
+
+.prons .prons_wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 35px;
+}
+
+.prons .prons_wrapper .prons_round{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 60px;
+    width: 116px;
+    height: 116px;
+    background-color: #1EACC7;
+    border-radius: 100%;
+}
+
+.prons .prons_wrapper .prons_desc{
+    width: 371px;
+    margin: 26px 0 0 25px;
+}
+
+.prons .prons_wrapper .prons_desc .prons_subheader{
+    color: #1EACC7;
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 400;
+    text-align: left;
+    width: 371px;
+}
+
+.prons .prons_wrapper .prons_desc .prons_text{
+    color: #202020;
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 21px;
+    text-align: left;
+}
